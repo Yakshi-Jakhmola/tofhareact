@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul li,
+ol li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header_design{
+    
+    box-shadow: 0 0 5px #bdbdbd;
+    background: var(--dark-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 40px;
+    width: 100%;
+}
+.logo_design img{
+    max-width: 160px;
+}
+.menu_design ul{
+    display: flex;
+    gap: 40px;
+}
+.menu_design ul li{
+    list-style: none;
+}
+.menu_design ul li a{
+    text-decoration: none;
+    color: var(--green-color);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+}
+.menu_bar{
+    display: none;
+}
+.menu_bar i{
+    color: var(--green-color);
+    font-size: 23px;
+}
+.phone_number a{
+    color: var(--green-color);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.mobile-device{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    background: var(--green-color);
+    transition: var(--transition);
+    padding: 20px;
+    border-radius: 0 60px 0 0;
+    z-index: 999;
+  }
+  .mobile-device .mobile-logo{
+    border-bottom: 1px dashed #f1f1f1;
+  }
+  .mobile-device .mobile-logo img{
+    max-width: 200px;
+  }
+  .close-bar{
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--green-color);
+    background: var(--white-color);
+    box-shadow: var(--light-shadow);
+    z-index: 888;
+  }
+  .mobile-menu ul li a{
+    padding: 8px 0;
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-family: var(--main-font);
+    font-size: 18px;
+    display: block;
+  }
+  .mobile-social-media ul{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .mobile-social-media ul li a{
+    border: 1px solid var(--para-color);
+    color: var(--white-color);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .mobile-email a,
+  .mobile-number a{
+    color: var(--white-color);
+  }
+
+  @media(max-width: 992px){
+    .phone_number{
+        display: none;
+    }
+    .menu_design{
+        display: none;
+    }
+    .menu_bar{
+        display: block;
+    }
+    .mobile-device.active{
+        left: 0;
+    }
+  }
