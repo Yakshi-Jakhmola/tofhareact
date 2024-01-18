@@ -2,16 +2,6 @@ import React from "react";
 import './Navbar.css';
 
 const Navbar = () =>{
-    var menubar = document.querySelector(".open-menu");
-    var mobilemenu = document.querySelector(".mobile-device");
-    var closemenu = document.querySelector(".mobile-menu-close");
-
-    menubar.addEventListener("click", function(){
-    mobilemenu.classList.add("active");
-    });
-    closemenu.addEventListener("click", function(){
-    mobilemenu.classList.remove("active");
-    });
     return(
         <>
             <div className="header_design">
@@ -28,10 +18,10 @@ const Navbar = () =>{
                     </ul>
                 </div>
                 <div className="phone_number">
-                    <a href="tel:+91 8448748957"> <i class="fa-solid fa-phone-volume"></i>  +91 8448748957</a>
+                    <a href="tel:+91 8448748957"> <i className="fa-solid fa-phone-volume"></i>  +91 8448748957</a>
                 </div>
                 <div className="menu_bar">
-                    <i class="fa-solid fa-bars  open-menu"></i>
+                    <i className="fa-solid fa-bars  open-menu"></i>
                 </div>
             </div>
             <div className="mobile-device">
