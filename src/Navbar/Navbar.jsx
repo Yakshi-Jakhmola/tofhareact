@@ -43,11 +43,11 @@ const Navbar = () => {
         <div className="phone_number">
           <a href="tel:+91 8448748957">
             {" "}
-            <i class="fa-solid fa-phone-volume"></i> +91 8448748957
+            <i className="fa-solid fa-phone-volume"></i> +91 8448748957
           </a>
         </div>
         <div className="menu_bar">
-          <i class="fa-solid fa-bars  open-menu" onClick={handleMenuClick}></i>
+          <i className="fa-solid fa-bars  open-menu" onClick={handleMenuClick}></i>
         </div>
       </div>
       <div className={`mobile-device ${isMobileMenuActive ? 'active' : ''}`}>
@@ -60,19 +60,19 @@ const Navbar = () => {
         <div className="mobile-menu">
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a>Home</a>
             </li>
             <li>
-              <a href="#category">Category</a>
+              <a>Category</a>
             </li>
             <li>
-              <a href="#service">Service</a>
+              <a>Service</a>
             </li>
             <li>
-              <a href="#client">Client</a>
+              <a>Client</a>
             </li>
             <li>
-              <a href="#why-choose">Why Choose Us</a>
+              <a>Why Choose Us</a>
             </li>
           </ul>
         </div>

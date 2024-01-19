@@ -13,40 +13,46 @@ const Mainsection = ()=>{
     var atposition = email.indexOf("@");
     var dotposition = email.lastIndexOf(".");
 
-    const submitbtn = () =>{
-        if(name == ""){
-            toast.warning("Name Field is Blank!...")
+    const submitbtn = (i) =>{
+        i.preventDefault();
+        try{
+            if(name == ""){
+                toast.warning("Name Field is Blank!...")
+            }
+            else if(name.length < 2){
+                toast.warning("Name Greather Then 2")
+            }
+            else if(email == ""){
+                toast.warning("Email Field is Blank!...")
+            }
+            else if(atposition < 3 || dotposition < atposition + 2 || dotposition + 2 >= email.length){
+                toast.warning("Your Email is Worng...")
+            }
+            else if(phone == ""){
+                toast.warning("Phone Number Field is Blank!...")
+            }
+            else if(phone.length <= 9 || phone.length >= 11){
+                toast.warning("Enter the Number Between 1 to 9")
+            }
+            else if(quantity == ""){
+                toast.warning("Quanity Field is Empty!.....")
+            }
+            else if(quantity.length <= 0){
+                toast.warning("Minimum Quantity value is 1");
+            }
+            else if (comment == ""){
+                toast.warning("Please Fill this Field!....")
+            }
+            else if(comment.length < 10){
+                toast.warning("Write a Comment Greather then 10 words")
+            }
+            else{
+                toast.success("Thank You For Submission")
+            }
         }
-        else if(name.length < 2){
-            toast.warning("Name Greather Then 2")
-        }
-        else if(email == ""){
-            toast.warning("Email Field is Blank!...")
-        }
-        else if(atposition < 3 || dotposition < atposition + 2 || dotposition + 2 >= email.length){
-            toast.warning("Your Email is Worng...")
-        }
-        else if(phone == ""){
-            toast.warning("Phone Number Field is Blank!...")
-        }
-        else if(phone.length <= 9 || phone.length >= 11){
-            toast.warning("Enter the Number Between 1 to 9")
-        }
-        else if(quantity == ""){
-            toast.warning("Quanity Field is Empty!.....")
-        }
-        else if(quantity.length <= 0){
-            toast.warning("Minimum Quantity value is 1");
-        }
-        else if (comment == ""){
-            toast.warning("Please Fill this Field!....")
-        }
-        else if(comment.length < 10){
-            toast.warning("Write a Comment Greather then 10 words")
-        }
-        else{
-            toast.success("Thank You For Submission")
-        }
+        catch(e){
+            console.log(e)
+        };
 
     }
     return(
@@ -69,25 +75,25 @@ const Mainsection = ()=>{
                                         <div className="row">
                                             <div className="col-lg-6 col-md-6 mb-3">
                                                 <div className="user-box">
-                                                <input type="text" name="" required="" value={name} onChange={(i) => setName(i.target.value)}/>
+                                                <input type="text" name="" required value={name} onChange={(i) => setName(i.target.value)}/>
                                                 <label>Name</label>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6 mb-3">
                                                 <div className="user-box">
-                                                <input type="email" name="" required="" value={email} onChange={(i) => setEmail(i.target.value)}/>
+                                                <input type="email" name="" required value={email} onChange={(i) => setEmail(i.target.value)}/>
                                                 <label>Email</label>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6 mb-3">
                                                 <div className="user-box">
-                                                <input type="number" name="" required="" value={phone} onChange={(i) => setPhone(i.target.value)}/>
+                                                <input type="number" name="" required value={phone} onChange={(i) => setPhone(i.target.value)}/>
                                                 <label>Phone</label>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6 mb-3">
                                                 <div className="user-box">
-                                                <input type="number" name="" required="" value={quantity} onChange={(i) => setQuantity(i.target.value)}/>
+                                                <input type="number" name="" required value={quantity} onChange={(i) => setQuantity(i.target.value)}/>
                                                 <label>Quantity</label>
                                                 </div>
                                             </div>
