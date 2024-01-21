@@ -1,0 +1,36 @@
+.Category{
+    height: 300px;
+    width: 100%;
+}
+.Category-Heading{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Category-Heading>h1{
+    color: var(--green-color);
+}
+.main-Category-slick{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Category-slick{
+    height: 200px;
+    width: 90%;
+}
+.slick-img{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.slick-img>img{
+    height: 150px;
+    border-radius: 100%;
+    border: 1px purple solid;
+}
