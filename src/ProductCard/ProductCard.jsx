@@ -3,8 +3,17 @@ import './ProductCard.css'
 const ProductCard = ({backGroundImage , downloadLogo , TagName}) => {
   return (
     <div className='ProductCard'>
-        <img src={backGroundImage}/>
-        
+        <div className='productimage'>
+            <img src={backGroundImage}/>
+        </div>
+        <div className='productbottom'>
+          <div className='productname'>
+            <h6>{TagName}</h6>
+          </div>
+          <div className='producticon'>
+              <i class="fa-solid fa-download"></i>
+          </div>
+        </div>
     </div>
   )
 }

@@ -1,5 +1,35 @@
 .ProductCard{
-    height: 300px;
-    width: 300px;
-    border: 2px red solid;
+    position: relative;
+}
+.productimage img{
+    box-shadow: var(--dark-shadow);
+    border-radius: 8px;
+    position: relative;
+}
+.productbottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    padding: 0 20px;
+}
+.productname h6{
+    background: var(--white-color);
+    box-shadow: 0 0 5px #bdbdbd;
+    border-radius: 40px;
+    color: var(--green-color);
+    display: block;
+    padding: 7px 15px;
+}
+.producticon i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white-color);
+    box-shadow: var(--dark-shadow);
+    text-align: center;
+    line-height: 40px;
+    color: var(--green-color);
 }
