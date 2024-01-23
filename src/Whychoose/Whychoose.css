@@ -1,0 +1,18 @@
+.why-choose-card{
+    padding: 20px;
+    background: var(--white-color);
+    box-shadow: var(--dark-shadow);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.why-choose-icon img{
+    max-width: 60px;
+    margin-bottom: 20px;
+}
+.why-choose-name h5{
+    color: var(--green-color);
+    text-align: center;
+}

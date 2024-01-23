@@ -1,0 +1,13 @@
+.client-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.client-image img{
+    max-width: 150px;
+    filter: grayscale(1);
+    transition: all 0.5s;
+}
+.client-image img:hover{
+    filter: grayscale(0);
+}
